@@ -1,0 +1,2 @@
+# simple-carousel-with-python
+Nesse projeto se encontra dois algoritmos com a mesma finalidade: apresentar uma sequência de imagens assim como o carousel do site da Netflix. Porém, o programa da pasta "Trabalho parte 1" implementará o comportamento do carousel com a ajuda de listas duplamente encadeadas, enquanto que o "Trabalho final - parte 2" replicará o comportamento através do uso da recursividade
