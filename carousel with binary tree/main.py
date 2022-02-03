@@ -62,15 +62,14 @@ class BinaryTree(TreeADT):
 
     def __insert_children(self, root, node): # root(15,11,_,18) - node(18,15,_,_)
 
-        if (node._data) < (root._data):
+        if (node._data["valorRed"]) < (root._data["valorRed"]):
             if (not root._left):  # Caso base - condição de parada da recursividade
                 root._left = node
                 node._parent = root
             else:
                 self.__insert_children(root._left, node) 
 
-
-        elif (node._data) > (root._data):
+        elif (node._data['valorRed']) > (root._data['valorRed']):
             if (not root._right): # caso (_right != None) então retorna True e dps False;
                 root._right = node;
                 node._parent = root;
@@ -231,12 +230,28 @@ for i in range(0, len(imagens)):
 #print("length: "+str(len(redChannelImages)))
 
 
+nomeImagem = lambda name : name[ name.rindex('/')+1 : name.rindex('.') ];
+
+no = BinaryTree(redChannelImages[0]);
+
+for index in range(1, len(redChannelImages)):
+    no.insert(redChannelImages[index]);  # in-order, pre-order, post-order
+
+listaPre_order = no.traversal(False, True, False)[1];  # in-order, pre-order, post-order
+print("Lista de imagens no modo Pre-order: \n")
+[  print(nomeImagem(image['nomeImagem'])+": "+str(image['valorRed'])+"") for image in listaPre_order];
+
+listaIn_order = no.traversal(True, False, False)[0];  # in-order, pre-order, post-order
+print("\n Lista de imagens no modo In-order: \n")
+[  print(nomeImagem(image['nomeImagem'])+": "+str(image['valorRed'])+"") for image in listaIn_order];
+
+listaPost_order = no.traversal(False, False, True)[2]; # in-order, pre-order, post-order
+print("\n Lista de imagens no modo Post-order: \n")
+[  print(nomeImagem(image['nomeImagem'])+": "+str(image['valorRed'])+"") for image in listaPost_order];
 
 
 
-
-
-
+# TypeError: list indices must be integers or slice, not dict (para resoler isso basta acessar o indice que contem o dict diretamente como: index["propriedade"] e não assim:  vetor[index]  )
 
 
 
