@@ -1,4 +1,4 @@
-# Slider de posters interativo
+# Slider interativo de cartazes de filmes
 
 # Preview:
 <img src="https://i.imgur.com/clWPOe6.png" alt="tela do programa" />
@@ -10,8 +10,10 @@ Nesse projeto se encontra dois algoritmos com a mesma finalidade: apresentar uma
 de filmes mais vistos. O programa da pasta "carousel with doubly linked list" implementará o comportamento do carrossel com a ajuda de listas duplamente encadeadas, enquanto que na pasta "carousel with binary tree" se encontra o algoritmo que replica esse comportamento através do uso da árvore binária, na qual é aplicada o conceito de recursividade para acesso à todos os seus elementos.
 
 # Módulos necessários para rodar o programa: 
-1 - Módulo "cv2" <Br />
-2 - Módulo "numpy"
+1 - Módulo "opencv"    (Caso não tenha instale com o seguinte comando: "pip install opencv-python") <Br />
+2 - Módulo "numpy"  (Caso não tenha instale com o seguinte comando: "pip install numpy")
+
+(Comando para exibir os módulos instalados: "python -m pip freeze")
 
 # Como executar :grey_question: 
 
@@ -20,7 +22,7 @@ de filmes mais vistos. O programa da pasta "carousel with doubly linked list" im
 3 - Acessa a pasta via prompt de comando <Br />
 4 - execute o comando "python main.py" <Br />
 
-## Como controlar as imagens:
+# Como controlar as imagens:
 
 :large_blue_circle: Clique A para ver a imagem da esquerda <Br />
 :large_blue_circle: Clique B para ver a imagem da direita <Br />
