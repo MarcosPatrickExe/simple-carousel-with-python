@@ -220,17 +220,16 @@ class BinaryTree(TreeADT):
 imagens= [
     ['images/Ant-man.jpg', 2015],
     ['images/Aquaman.jpg', 2018],
-    ['images/Matrix.jpg', 1999]
+    ['images/Matrix.jpg', 1999],
+    ['images/King Kong.jpg', 2005],
+    ['images/Black panther.jpg', 2018],
+    ['images/Captain marvel.jpg', 2019],
+    ['images/Captain america.jpg', 2011],
+    ['images/Avengers endgame.jpg', 2019],
+    ['images/Avengers infinity war.jpg', 2018],
+    ['images/Spider-man no way home.jpg', 2021],
+    ['images/Captain america civil war.jpg', 2016] 
 ];
-"""  ['images/King Kong.jpg', 2005],
-['images/Black panther.jpg', 2018],
-['images/Captain marvel.jpg', 2019],
-['images/Captain america.jpg', 2011],
-['images/Avengers endgame.jpg', 2019],
-['images/Avengers infinity war.jpg', 2018],
-['images/Spider-man no way home.jpg', 2021],
-['images/Captain america civil war.jpg', 2016] 
-"""
 
 
 redChannelImages = [None]*len(imagens) ;#Criando lista de tamanho 11
@@ -287,8 +286,6 @@ exibirDetalhes = False;
 indexAtual = 1;
 cortarNomeImagem = lambda name : name[ name.rindex('/')+1 : name.rindex('.') ];
 lista_order = None;
-global tecla
-tecla=0
 
 def pegarElemento(index, lista, dados):
     contador = 0;
@@ -323,14 +320,6 @@ def carregarImagem(caminhoFoto):
 
 #================= LOOP DE ACESSO AO MENU INICIAL ==================
 print("\n Seja bem-vindo(a)! Escolha uma das opcoes abaixo para percorer\n as imagens das capas de filmes cadastradas no programa: \n");
-
-def mouseClick(event, x, y, flags, param):
-    global tecla
-
-    print("mouse clicado: "+str(x)+str(y));
-    if event == opencv.EVENT_RBUTTONDOWN: # RETORNA TRUE CASO O BOTAO ESQUERDO DO MOUSE FOR CLICADO
-        tecla = ord('i');
-        print("mouse clicado");
 
 while True:
      consultarLista = False;
@@ -388,16 +377,7 @@ while True:
                  else:
                      indexAtual+=1
 
-             """
-                try:    
-                    # x, y, width, height = opencv.getWindowImageRect('Detalhes sobre o filme');
-                    x = opencv.getWindowProperty('Detalhes sobre o filme', opencv.WND_PROP_VISIBLE) >= 1; # RETORNA TRUE CASO A JANELA FOR FECHADA MAIS 
-                except:
-                    print("valor da janela esta com NULL!!!");
                 
-                print("Valor de X da janela de info => "+str(x));
-             """          
-             print("tecla: "+str(tecla));
              if tecla == ord('i'): #opencv.getWindowProperty('Detalhes sobre o filme', 0) == -1
                     
                     if exibirDetalhes == False:
@@ -416,9 +396,9 @@ while True:
                                 opencv.putText(janelaMensagem, str(pegarElemento(indexAtual, lista_order, "data")), (250, 70), opencv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, opencv.LINE_AA);
 
                                 opencv.imshow("Detalhes sobre o filme", janelaMensagem);
-                                opencv.setMouseCallback("Detalhes sobre o filme", mouseClick);
+                               # opencv.setMouseCallback("Detalhes sobre o filme", mouseClick);
                                # opencv.waitKey(0);
-                              #  print("WND_PROP_VISIBLE) == -1 retornou =>  "+str(opencv.WND_PROP_VISIBLE));   
+                               # print("WND_PROP_VISIBLE) == -1 retornou =>  "+str(opencv.WND_PROP_VISIBLE));   
                                 exibirDetalhes = True;
                                 
 
