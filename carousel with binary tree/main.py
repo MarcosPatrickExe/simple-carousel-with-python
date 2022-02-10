@@ -228,7 +228,11 @@ imagens= [
     ['images/Avengers endgame.jpg', 2019],
     ['images/Avengers infinity war.jpg', 2018],
     ['images/Spider-man no way home.jpg', 2021],
-    ['images/Captain america civil war.jpg', 2016] 
+    ['images/Captain america civil war.jpg', 2016],
+    ['images/The book of eli.jpg', 2010],
+    ['images/Zombieland double tap.jpg', 2019],
+    ['images/I robot.jpg', 2004],
+    ['images/Real steel.jpg', 2011] 
 ];
 
 
@@ -526,7 +530,7 @@ print("Valores no modo de 'post-order':");
 print( str([ v for v in valores]) +" \n");
 """
 
-# CRIANDO LISTAS DE FORMA MAIS FÃ�CIL:
+# CRIANDO LISTAS DE FORMA MAIS FÃCIL:
 #https://stackoverflow.com/questions/10712002/create-an-empty-list-in-python-with-certain-size
 
 """
