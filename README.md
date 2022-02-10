@@ -1,4 +1,4 @@
-# simple carousel with python
+# Slider de posters interativo
 
 # Preview:
 <img src="https://i.imgur.com/clWPOe6.png" alt="tela do programa" />
